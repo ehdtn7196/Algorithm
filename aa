@@ -1,0 +1,17 @@
+T = int(input())
+# test case 개수
+for i in range(T):
+    x1, y1, r1, x2, y2, r2 = map(int, input().split())
+
+    #A와 B 사이 거리 계산
+    d = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+
+    #교차하는 경우(점2개에서 만날 때)
+    if abs(r1-r2) < d < r1 + r2:
+    print(2)
+    #한 점에서 만나는 경우(외접, 내접)
+    elif d == r1+r2 or d == abs(r1-r2):
+    print(1)
+    #만나는 점이 없을 때
+    else:
+    print(0)
