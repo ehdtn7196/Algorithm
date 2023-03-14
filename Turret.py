@@ -14,10 +14,13 @@ for i in range(T):
 
     if abs(r1-r2) < d < r1 + r2:
         print(2)
+
     elif d == r1+r2 or d == abs(r1-r2):
         if d == 0 and r1 == r2:
             print(-1)
+
         else:
             print(1)
+
     else:
         print(0)
