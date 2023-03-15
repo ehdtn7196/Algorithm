@@ -12,7 +12,7 @@ for _ in range(T):
     if 0 <= n <= 40:
         a, b = 1, 0
         for _ in range(n):
-            a, b = b , a+b
+            a, b = b, a+b
     print(a, b)
 else:
     pass
