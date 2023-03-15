@@ -49,14 +49,13 @@ for _ in range(T):
         # 큐에서 건물 하나를 빼서 처리
         i = MTB.get()
         # Time 함수의 i번째 인덱스는 건물 소요시간 리스트에 있는 i번째 상수
-        Time[i] = d[i - 1]
+        Time[i] += d[i - 1]
         for j in rule[i]:
-            NTB[j] -=1
+            NTB[j] -= 1
             if NTB[j] == 0:
                 MTB.put(j)
-            Time[j] = max(Time[j], Time[i] + d[j-1])
+            Time[j] = max(Time[j], Time[i])
 
-# 건물 W까지의 최소 소요시간 구하기
+    # 건물 W를 완성하는데 필요한 최소 시간을 출력합니다.
     W = int(input())
-    if W in MTB.queue:
-        print(Time[W])
+    print(Time[W])
