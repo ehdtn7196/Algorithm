@@ -48,7 +48,7 @@ for j in range(1, C+1):
                             d = 4
                         new_c += -1 if d == 4 else 1
                 # if two shark in same space
-                if new_array[new_r][new_c] == (0, 0 ,0) or new_array[new_r][new_c][2] < z:
+                if new_array[new_r][new_c] == (0, 0, 0) or new_array[new_r][new_c][2] > z:
                     new_array[new_r][new_c] = (s, d, z)
     array = new_array
 
