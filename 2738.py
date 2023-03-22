@@ -21,3 +21,5 @@ for i in range(N):
 
 for r in C:
     print(*r)
+
+    print(r)
